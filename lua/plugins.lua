@@ -2,6 +2,9 @@
 local lazy = require("config.lazy")
 local treesitter = require("config.treesitter")
 local mason_lsp = require("config.mason_lsp")
+local none_ls = require("config.none_ls")
+local nvim_tree = require("config.nvim_tree")
+local lualine = require("config.lualine")
 
 --locally configured plugins
 local kanagawa = {
@@ -30,6 +33,11 @@ local mason =  {
         end,
 }
 
+local telescope = {
+    'nvim-telescope/telescope.nvim', tag = '0.1.8',
+     dependencies = { 'nvim-lua/plenary.nvim' }
+}
+
 local web_dev_icons =  { "nvim-tree/nvim-web-devicons", opts = {}}
 
 --create a plugins table
@@ -40,11 +48,12 @@ local plugins = {
   lsp_config,
   mason,
   mason_lsp,
-  web_dev_icons
+  web_dev_icons,
+  none_ls,
+  nvim_tree,
+  telescope,
+  lualine
 }
 
 --initialize the lazy.nvim with necessary plugins
 lazy.setup(plugins)
-
-
-
