@@ -5,6 +5,8 @@ local mason_lsp = require("config.mason_lsp")
 local none_ls = require("config.none_ls")
 local nvim_tree = require("config.nvim_tree")
 local lualine = require("config.lualine")
+local coq = require("config.coq")
+local neogit = require("config.neogit")
 
 --locally configured plugins
 local kanagawa = {
@@ -15,14 +17,15 @@ local kanagawa = {
 }
 
 local text_objects =  {
-        "nvim-treesitter/nvim-treesitter-textobjects"
+    "nvim-treesitter/nvim-treesitter-textobjects"
 }
 
 local lsp_config = {
-        "neovim/nvim-lspconfig",
-        config = function()
-            local lspconfig = require("lspconfig")
-        end,
+   "neovim/nvim-lspconfig",
+   dependencies = coq,
+   config = function()
+        local lspconfig = require("lspconfig")
+   end,
 }
 
 local mason =  {
@@ -52,7 +55,9 @@ local plugins = {
   none_ls,
   nvim_tree,
   telescope,
-  lualine
+  lualine,
+  coq,
+  neogit,
 }
 
 --initialize the lazy.nvim with necessary plugins
