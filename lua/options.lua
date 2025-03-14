@@ -1,6 +1,7 @@
 opt = vim.opt
 cmd = vim.cmd
 g = vim.g
+api = vim.api
 
 opt.number = true
 opt.relativenumber = true
@@ -20,3 +21,10 @@ opt.termguicolors = true
 g.mapleader = " "
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
+
+--autostart the COQ plugin for autocompletion on neovim startup
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    vim.cmd("COQnow --shut-up")
+  end,
+})

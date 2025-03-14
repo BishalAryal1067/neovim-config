@@ -5,9 +5,9 @@ return {
     -- lua & third party sources -- See https://github.com/ms-jpq/coq.thirdparty
     { 'ms-jpq/coq.thirdparty', branch = "3p" },
 
-    config = function()
-    vim.g.coq_settings = {
+    init = function()
+      vim.g.coq_settings = {
         auto_start = true, 
-    }
+      }
    end,
 }

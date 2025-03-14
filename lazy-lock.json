@@ -3,6 +3,7 @@
   "coq.thirdparty": { "branch": "3p", "commit": "6ee3c221c308dca7071387267ac76c9272b184a9" },
   "coq_nvim": { "branch": "coq", "commit": "e48a17c63029ef9ac72af80a7a3a56577acffb00" },
   "diffview.nvim": { "branch": "main", "commit": "4516612fe98ff56ae0415a259ff6361a89419b0a" },
+  "fzf-lua": { "branch": "main", "commit": "d0418e3366809246ab6fb7f298723a2ce80c30c6" },
   "kanagawa.nvim": { "branch": "master", "commit": "cfd67b0e1eeaa04302b8c7eb072253d24bf22d84" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "lualine.nvim": { "branch": "master", "commit": "f4f791f67e70d378a754d02da068231d2352e5bc" },
